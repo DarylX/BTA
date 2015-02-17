@@ -1,7 +1,5 @@
 package com.darylx.bta;
 
-import android.app.ActionBar;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -9,7 +7,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.darylx.bta.controllers.PageSwitchController;
-import com.darylx.bta.views.CabinetView;
 
 public class BTApplication extends ActionBarActivity {
 
@@ -26,7 +23,7 @@ public class BTApplication extends ActionBarActivity {
         pager = (ViewPager)findViewById(R.id.pager);
         pager.setAdapter(pageSwitcher);
     }
-;
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
