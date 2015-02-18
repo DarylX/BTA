@@ -10,13 +10,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
 
 import com.darylx.bta.R;
-
-import java.util.Random;
+import com.darylx.bta.util.CabinetListAdapter;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -80,6 +76,10 @@ public class CabinetView extends Fragment {
 
         rv.setLayoutManager(new LinearLayoutManager(inflater.getContext()));
         rv.setItemAnimator(new DefaultItemAnimator());
+
+        CabinetListAdapter myAdapter = new CabinetListAdapter();
+
+        rv.setAdapter(myAdapter);
 
         return mainView;
     }
