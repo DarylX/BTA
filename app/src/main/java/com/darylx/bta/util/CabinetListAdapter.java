@@ -1,11 +1,12 @@
 package com.darylx.bta.util;
 
 import android.content.Context;
+import android.support.v4.view.ViewCompat;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ImageButton;
 
 import com.darylx.bta.R;
 
@@ -24,7 +25,9 @@ public class CabinetListAdapter extends RecyclerView.Adapter<CabinetListAdapter.
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         Context context = viewGroup.getContext();
-        View v = LayoutInflater.from(context).inflate(R.layout.cabinet_drink_cardview,viewGroup,false);
+        CardView v = (CardView)LayoutInflater.from(context).inflate(R.layout.cabinet_drink_cardview,viewGroup,false);
+        ImageButton ib = (ImageButton)v.findViewById(R.id.cabinet_delete_card_btn);
+        ViewCompat.setElevation(ib,20f);
         return new ViewHolder(v);
     }
 
@@ -40,10 +43,8 @@ public class CabinetListAdapter extends RecyclerView.Adapter<CabinetListAdapter.
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
-        public View mTextView;
-        public ViewHolder(View v) {
+        public ViewHolder(CardView v) {
             super(v);
-            mTextView = v;
         }
     }
 }
