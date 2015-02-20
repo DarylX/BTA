@@ -18,7 +18,6 @@ public class BTApplication extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_btapplication);
 
-        final android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         pageSwitcher = new PageSwitchController(this.getSupportFragmentManager());
         pager = (ViewPager)findViewById(R.id.pager);
         pager.setAdapter(pageSwitcher);
