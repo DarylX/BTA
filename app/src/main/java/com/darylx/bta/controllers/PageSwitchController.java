@@ -19,7 +19,10 @@ public class PageSwitchController extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int i) {
-        return new CabinetView();
+        if(i == 1)
+            return new CabinetView();
+        else
+            return new Fragment();
     }
 
     @Override
