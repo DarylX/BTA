@@ -10,4 +10,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
+    <!-- Floating action button -->
+    <ImageButton style="@style/AppTheme"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="New Button"
+        android:id="@+id/add_fab"
+        android:src="@android:drawable/ic_input_add"
+        android:background="@drawable/oval_shape"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginRight="24dp"
+        android:stateListAnimator="@drawable/fab_elevation_anim"/>
+
 </RelativeLayout>
